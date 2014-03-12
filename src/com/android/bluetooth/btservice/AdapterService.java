@@ -503,6 +503,10 @@ public class AdapterService extends Service {
             return service.isEnabled();
         }
 
+        public boolean isRadioEnabled() {
+            return false;
+        }
+
         public int getState() {
             // don't check caller, may be called from system UI
             AdapterService service = getService();
@@ -544,6 +548,14 @@ public class AdapterService extends Service {
             AdapterService service = getService();
             if (service == null) return false;
             return service.disable();
+        }
+
+        public boolean enableRadio() {
+            return false;
+        }
+
+        public boolean disableRadio() {
+            return false;
         }
 
         public String getAddress() {
